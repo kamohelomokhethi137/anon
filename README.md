@@ -66,17 +66,27 @@ anon -stop -boot-disable
 Available Options
 
 Option	Description
+```bash
 -start	Enable anonymity mode
--stop	Revert settings
--spoof-time	Randomize system clock
--spoof-browser	Launch Firefox with fake user-agent
--wipe-logs	Clear logs and shell history
--disable-ipv6	Disable IPv6 system-wide
--check-env	Check public IP, DNS leaks, and Tor status
--boot-enable	Auto-start at system boot
--boot-disable	Remove auto-start service
--help	Show help message
 
+-stop	Revert settings
+
+-spoof-time	Randomize system clock
+
+-spoof-browser	Launch Firefox with fake user-agent
+
+-wipe-logs	Clear logs and shell history
+
+-disable-ipv6	Disable IPv6 system-wide
+
+-check-env	Check public IP, DNS leaks, and Tor status
+
+-boot-enable	Auto-start at system boot
+
+-boot-disable	Remove auto-start service
+
+-help	Show help message
+```
 
 
  How It Works
