@@ -4,7 +4,6 @@ INSTALL_PATH="/usr/local/bin/$SCRIPT_NAME"
 MAC_IFACE="wlan0"
 STARTUP_SERVICE="/etc/systemd/system/anon-start.service"
 
-#=== DEPENDENCY CHECK ===#
 install_deps() {
     echo "[*] Checking required packages..."
     for pkg in lolcat figlet macchanger tor cloudflared; do
@@ -56,13 +55,13 @@ start_anonymity() {
             echo "[*] Hostname already spoofed as '$CURRENT_HOST'. Skipping."
         fi
 
-        # DNS Over HTTPS
+    
         chattr -i /etc/resolv.conf 2>/dev/null
         echo "nameserver 127.0.0.1" > /etc/resolv.conf
         chattr +i /etc/resolv.conf
         nohup cloudflared proxy-dns --address 127.0.0.1 --port 53 >/dev/null 2>&1 &
 
-        # Block Telemetry Domains
+        
         echo "Blocking telemetry domains..."
         cat <<EOF >> /etc/hosts
 127.0.0.1 facebook.com
@@ -231,7 +230,6 @@ install_globally() {
     fi
 }
 
-#=== MAIN ===#
 install_deps
 install_globally
 banner
