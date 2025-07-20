@@ -63,8 +63,6 @@ anon -start -spoof-time -wipe-logs
 anon -stop -boot-disable
 ```
 
-Available Options
-
 Option	Description
 ```bash
 -start	Enable anonymity mode
@@ -86,8 +84,16 @@ Option	Description
 -boot-disable	Remove auto-start service
 
 -help	Show help message
-```
 
+so your firewall now only allow connections from tor to pass.
+so to use yout tools..or browser
+start everything with proxychain
+
+for example
+proxychains apt install tor
+proxychain nmap ,..... 
+proxychains firefox
+```
 
  How It Works
 Uses macchanger to spoof your network MAC address
