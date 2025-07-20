@@ -31,7 +31,7 @@
 ## ⚙️ Installation
 
 ```bash
-git clone https://github.com/yourusername/anon
+git clone https://github.com/kamohelomokhethi137/anon.git
 cd anon
 chmod +x anon.sh
 sudo ./anon.sh
